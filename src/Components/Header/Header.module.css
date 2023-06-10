@@ -1,0 +1,291 @@
+.container{
+    padding: 1rem;
+    display: flex;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 2rem;
+}
+.logo>:first-child{
+    width: 7rem;
+}
+.logo>:nth-child(2){
+    width: 8rem;
+    border-radius: 50px;
+    border: 2px black solid;
+}
+.logo>span{
+    font-weight: 600;
+}
+.right{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropDownData{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    
+    text-align: start;
+    background: wheat;
+    display: none;
+    padding: 0.1rem;
+    position: absolute;
+    right: 10rem;
+    top: 45px;
+    margin-top: 0.5rem;
+    min-width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0, 0,0.2);
+    z-index: 1;
+    list-style: none;
+} 
+.data{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem; 
+    color: black;
+}
+
+.dropDownData ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.data ul li {
+    background: wheat;
+    color: blue;
+}
+
+
+.menu{
+    flex: 1%;
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    justify-content: center;
+    z-index: 99;
+}
+.menu li {
+    position: relative;
+    float: left;
+}
+.menu li a{
+    padding: 8px;
+    display: block;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.menu li:hover{
+    /* background: #2C3E50; */
+    color: black;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.menu li a:hover{
+    background: var();
+    color: black;
+    width:fit-content;
+    border-bottom: 2px solid black;
+    /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
+}
+
+.dropDown{
+    display: none;
+    position: relative;
+    top:100%;
+    left:0%
+}
+
+.menu li ul{
+    list-style: none;
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: wheat;
+    display: none;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.menu li ul li{
+    width: 100%;
+    color: black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.menu li:focus-within> ul,
+.menu li:hover> ul{
+    display: initial;
+}
+.search{
+    width: 7rem;
+    outline: none;
+    height: 8%;
+    border: 2px black solid;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+.cart{
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1170px){
+    .logo>:first-child{
+        width: 5rem;
+    }
+
+    .logo>:nth-child(2){
+        width: 7rem;
+    }
+
+}
+
+@media screen and (max-width:1070px){
+    .container{
+        padding: 0.2rem;
+    }
+    .logo>:first-child{
+        width: 4rem;
+    }
+
+    .logo>:nth-child(2){
+        width: 5rem;
+    }
+    .menu{
+        gap: 1rem;
+        justify-content: center;
+        z-index: 99;
+    }
+}
+
+@media screen and (max-width:950px){
+    .logo{
+        flex: 0;
+        gap: 1rem;
+    }
+    .menu{
+        gap: 0rem;
+        
+    }
+}
+
+@media screen and (max-width:830px){
+    .menu{
+        display: none;
+    }
+    .dropDown{
+        display: flex;
+        align-items: center;
+
+    }
+    .dropDownData{
+      display: initial;
+    } 
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+
+
+
+@media screen and (max-width:790px){
+    .dropDownData{
+        position: absolute;
+        right: 4rem;
+        top: 45px;
+    
+    } 
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:530px){
+    .logo>:first-child{
+        width: 3rem;
+    }
+    .logo>:nth-child(2){
+        width: 4rem;
+       
+    }
+
+    .search{
+        width: 6rem;
+    }
+    .cart{
+        width: 1.4rem;
+        height: 1.4rem;
+        cursor: pointer;
+        text-align: center;
+        align-items: center;
+    }
+    .right{
+        display: flex;
+        gap: 1rem;   
+    }
+
+    .dropDown>:first-child{
+        width: 35px;
+    }
+
+    .container{
+        padding: 0.1rem;
+    }
+    .menu{
+        gap: 0.1rem;
+        
+    }
+}
+
+@media screen and (max-width:440px){
+    .dropDownData{
+        background: wheat;
+        
+        padding: 0.1px;
+        position: absolute;
+        right: 1rem;
+        top: 45px;  
+        max-width: 220px;
+    } 
+}
+
+
+@media screen and (max-width:390px){
+    .search{
+        width: 4rem;
+    }
+
+    .logo{
+        gap: 0.1rem;
+    }
+
+    .dropDown>:first-child{
+        width: 30px;
+    }
+    .logo>:first-child{
+        width: 3rem;
+    }
+    .logo>:nth-child(2){
+        width: 3rem;
+       
+    }
+}
